@@ -1,0 +1,15 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} !^localhost(?::\d+)?$ [NC]
+RewriteCond %{HTTP_HOST} !^127\.0\.0\.1(?::\d+)?$
+
+RewriteRule ^/?$ index.php [L]
+
+RewriteRule crear crear.php [NC,L]
+RewriteRule ^crear/?$ crear.php [NC,L]
+
+RewriteRule actualizar? actualizar.php [NC,L]
+RewriteRule ^actualizar/?$ actualizar.php [NC,L]
+
+RewriteRule eliminar? eliminar.php [NC,L]
+RewriteRule ^eliminar/?$ eliminar.php [NC,L]
